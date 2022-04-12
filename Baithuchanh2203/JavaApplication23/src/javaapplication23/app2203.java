@@ -4,48 +4,46 @@
  * and open the template in the editor.
  */
 package javaapplication23;
-import java.util.Scanner;
+
 /**
  *
  * @author TC
  */
-public class app2203{
-    float a , b , c , delta, x1, x2;
-public static Scanner sc = new Scanner(System.in);
-    void nhapheso(){
-        System.out.print("\nHe so a = ");
-               a = sc.nextFloat();
-        System.out.print("He so b = ");
-               b = sc.nextFloat();
-        System.out.print("He so a = ");
-               c = sc.nextFloat();
-        }
-    void giaipt(){
-           if(a==0){
-               if(b==0){
-                   System.out.println("Phuong trinh co vo so nghiem");
-               }
-               else{
-                   System.out.println("Phuong trinh co 1 nghiem duy nhat x = " + -c/b);
-               }
-           }
-           else{
-             delta = b*b-4*a*c;
-                if ( delta <0 )
-                {
-                    System.out.println("Phuong trinh vo nghiem !");
-                }
-                else if ( delta == 0)
-                {
-                    x1 = -b/(2*a);
-                    System.out.println("Phuong trinh co nghiem kep " + x1);
-                }
-                else{
-                    x1=(float)(-b + Math.sqrt(delta))/(2*a);
-                    x2 =(float)(-b - Math.sqrt(delta))/(2*a);
-                    System.out.println("Phuong trinh co 2 nghiem phan biet x1= "+ x1+ "va x2 = " + x2);
-                }
-        }
-    }
-}
+public class app2203 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    hinhchunhat hcn = new hinhchunhat();
+    hcn.nhapchieurong();
+    hcn.nhapchieudai();
+    hcn.tinhchuvi();
+    hcn.inchuvi();
+    hcn.tinhdientich();
+    hcn.indientich();
     
+    
+    person a= new person();
+    a.nhapcancuoc();
+    a.nhaphovaten();
+    a.nhapdiachi();
+    a.gioitinh();
+    a.inperson();
+    
+    
+    sinhvien sv=new sinhvien();
+    sv.nhapmsv();
+    sv.nhapht();
+    sv.nhapngaysinh();
+    sv.nhapdc();
+    sv.nhapgioitinh();
+    sv.insinhvien();
+    
+    
+    
+    phuongtrinhbac2 pt = new phuongtrinhbac2();
+    pt.nhapheso();
+    pt.giaipt();
+    }  
+}
